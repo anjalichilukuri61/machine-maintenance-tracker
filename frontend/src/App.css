@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* FORM */
+.form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BUTTONS */
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Add */
+.add-btn {
+  background-color: green;
+  color: white;
+}
+
+/* Update */
+.update-btn {
+  background-color: blue;
+  color: white;
+}
+
+/* Edit */
+.edit-btn {
+  background-color: orange;
+  color: black;
+}
+
+/* Delete */
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
