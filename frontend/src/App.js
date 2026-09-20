@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+
 function App() {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("");
@@ -11,7 +13,7 @@ function App() {
 
   // GET machines
   const fetchMachines = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/machines");
+    const res = await axios.get(`${API_URL}/machines`);
     setMachines(res.data);
   };
 
@@ -21,7 +23,7 @@ function App() {
 
   // ADD machine
   const addMachine = async () => {
-    await axios.post("http://127.0.0.1:8000/machines", {
+    await axios.post(`${API_URL}/machines`, {
       name,
       status,
       location,
@@ -35,7 +37,7 @@ function App() {
 
   // DELETE machine
   const deleteMachine = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/machines/${id}`);
+    await axios.delete(`${API_URL}/machines/${id}`);
     fetchMachines();
   };
 
@@ -49,7 +51,7 @@ function App() {
 
   // UPDATE machine
   const updateMachine = async () => {
-    await axios.put(`http://127.0.0.1:8000/machines/${editId}`, {
+    await axios.put(`${API_URL}/machines/${editId}`, {
       name,
       status,
       location,
